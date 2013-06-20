@@ -1,0 +1,16 @@
+{
+    "name": "flint/sql-formatter",
+    "description": "Silex powered tool to format SQL",
+    "authors": [
+        {
+            "name": "Flint Interactive",
+            "email": "hello@flintinteractive.com.au"
+        }
+    ],
+    "require": {
+        "silex/silex": "1.0.*@dev",
+        "jdorn/sql-formatter": "1.3.*@dev",
+        "twig/twig": ">=1.8,<2.0-dev",
+        "twitter/bootstrap": "v2.3.2"
+    }
+}
