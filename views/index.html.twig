@@ -2,9 +2,23 @@
         "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <title></title>
+    <title>SQL Formatter</title>
 </head>
 <body>
+<form action="" method="post">
+    <label for="raw_sql">
+        Paste Yo' SQL.
+    </label><br/>
+    <textarea name="raw_sql" id="raw_sql" cols="50" rows="25" placeholder="Paste in a messy query for a tasty treat.">{{ raw_sql }}</textarea><br/>
+    <label>Should we highlight yo' results? <input type="checkbox" name="hi" value="1" {% if hi %}checked="checked"{% endif %}></label><br/>
 
+    <input type="submit" value="Format">
+</form>
+{% if cooked_sql %}
+<hr/>
+<pre>
+    {{ cooked_sql | raw }}
+</pre>
+{% endif %}
 </body>
 </html>
